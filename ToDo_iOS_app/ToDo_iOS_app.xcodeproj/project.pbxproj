@@ -13,6 +13,7 @@
 		80FE02A424CFF41C00B753C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FE02A224CFF41C00B753C1 /* Main.storyboard */; };
 		80FE02A624CFF42300B753C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FE02A524CFF42300B753C1 /* Assets.xcassets */; };
 		80FE02A924CFF42300B753C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FE02A724CFF42300B753C1 /* LaunchScreen.storyboard */; };
+		80FE02B424D01C3800B753C1 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE02B324D01C3800B753C1 /* ToDoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		80FE02A524CFF42300B753C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80FE02A824CFF42300B753C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80FE02AA24CFF42300B753C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80FE02B324D01C3800B753C1 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		80FE029B24CFF41C00B753C1 /* ToDo_iOS_app */ = {
 			isa = PBXGroup;
 			children = (
+				80FE02B224D01B7E00B753C1 /* Controller */,
+				80FE02B124D01B7400B753C1 /* View */,
+				80FE02B024D01B6000B753C1 /* Modal */,
 				80FE029C24CFF41C00B753C1 /* AppDelegate.swift */,
 				80FE029E24CFF41C00B753C1 /* SceneDelegate.swift */,
-				80FE02A024CFF41C00B753C1 /* ToDoVC.swift */,
 				80FE02A224CFF41C00B753C1 /* Main.storyboard */,
 				80FE02A524CFF42300B753C1 /* Assets.xcassets */,
 				80FE02A724CFF42300B753C1 /* LaunchScreen.storyboard */,
 				80FE02AA24CFF42300B753C1 /* Info.plist */,
 			);
 			path = ToDo_iOS_app;
+			sourceTree = "<group>";
+		};
+		80FE02B024D01B6000B753C1 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		80FE02B124D01B7400B753C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80FE02B324D01C3800B753C1 /* ToDoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80FE02B224D01B7E00B753C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				80FE02A024CFF41C00B753C1 /* ToDoVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 				80FE02A124CFF41C00B753C1 /* ToDoVC.swift in Sources */,
 				80FE029D24CFF41C00B753C1 /* AppDelegate.swift in Sources */,
 				80FE029F24CFF41C00B753C1 /* SceneDelegate.swift in Sources */,
+				80FE02B424D01C3800B753C1 /* ToDoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
