@@ -19,6 +19,7 @@ class ToDoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NetworkService.shared.getToDos()
     }
 
     @IBAction func onAddTapped(_ sender: Any) {
