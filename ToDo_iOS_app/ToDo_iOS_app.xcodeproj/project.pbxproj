@@ -9,20 +9,19 @@
 /* Begin PBXBuildFile section */
 		80FE029D24CFF41C00B753C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE029C24CFF41C00B753C1 /* AppDelegate.swift */; };
 		80FE029F24CFF41C00B753C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE029E24CFF41C00B753C1 /* SceneDelegate.swift */; };
-		80FE02A124CFF41C00B753C1 /* ToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE02A024CFF41C00B753C1 /* ToDoVC.swift */; };
 		80FE02A424CFF41C00B753C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FE02A224CFF41C00B753C1 /* Main.storyboard */; };
 		80FE02A624CFF42300B753C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FE02A524CFF42300B753C1 /* Assets.xcassets */; };
 		80FE02A924CFF42300B753C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FE02A724CFF42300B753C1 /* LaunchScreen.storyboard */; };
 		80FE02B424D01C3800B753C1 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE02B324D01C3800B753C1 /* ToDoCell.swift */; };
 		80FE02B624D01ECB00B753C1 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE02B524D01ECB00B753C1 /* Todo.swift */; };
 		80FE02B924D0201800B753C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE02B824D0201800B753C1 /* NetworkService.swift */; };
+		80FE02BB24D2667B00B753C1 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE02BA24D2667B00B753C1 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		80FE029924CFF41C00B753C1 /* ToDo_iOS_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo_iOS_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FE029C24CFF41C00B753C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80FE029E24CFF41C00B753C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80FE02A024CFF41C00B753C1 /* ToDoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoVC.swift; sourceTree = "<group>"; };
 		80FE02A324CFF41C00B753C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80FE02A524CFF42300B753C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80FE02A824CFF42300B753C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		80FE02B324D01C3800B753C1 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		80FE02B524D01ECB00B753C1 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		80FE02B824D0201800B753C1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		80FE02BA24D2667B00B753C1 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		80FE02B224D01B7E00B753C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				80FE02A024CFF41C00B753C1 /* ToDoVC.swift */,
+				80FE02BA24D2667B00B753C1 /* ToDoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,12 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80FE02A124CFF41C00B753C1 /* ToDoVC.swift in Sources */,
 				80FE029D24CFF41C00B753C1 /* AppDelegate.swift in Sources */,
 				80FE029F24CFF41C00B753C1 /* SceneDelegate.swift in Sources */,
 				80FE02B424D01C3800B753C1 /* ToDoCell.swift in Sources */,
 				80FE02B924D0201800B753C1 /* NetworkService.swift in Sources */,
 				80FE02B624D01ECB00B753C1 /* Todo.swift in Sources */,
+				80FE02BB24D2667B00B753C1 /* ToDoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

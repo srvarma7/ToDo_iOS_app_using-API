@@ -18,35 +18,35 @@ class NetworkService {
     let session = URLSession(configuration: .default)
     
     
-    func getToDos() {
+    func getToDos(onSuccess: @escaping (ToDos) -> Void) {
         
         let url = URL(string: BASE_URL)
         
         let task = session.dataTask(with: url!) { (data, response, error) in
-            if let error = error {
-                debugPrint(error.localizedDescription)
-                return
-            }
             
-            guard let data = data, let response = response as? HTTPURLResponse else {
-                debugPrint("Invalid data or response")
-                return
-            }
-            do {
-                if response.statusCode == 200 {
-                    //Parse the data
-                    let items = try JSONDecoder().decode(ToDos.self, from: data)
-                    print(items)
-                } else {
-                    let apiError = try JSONDecoder().decode(APIError.self, from: data)
-                    
+            DispatchQueue.main.async {
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    return
                 }
-            } catch {
                 
+                guard let data = data, let response = response as? HTTPURLResponse else {
+                    debugPrint("Invalid data or response")
+                    return
+                }
+                do {
+                    if response.statusCode == 200 {
+                        //Parse the data
+                        let items = try JSONDecoder().decode(ToDos.self, from: data)
+                        onSuccess(items)
+                    } else {
+                        let apiError = try JSONDecoder().decode(APIError.self, from: data)
+                        debugPrint(apiError)
+                    }
+                } catch {
+                    debugPrint("Error while parising \(error.localizedDescription)")
+                }
             }
-            
-            
-            
         }
         task.resume()
         
