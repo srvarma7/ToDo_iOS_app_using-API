@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct ToDos: Codable {
+    var items: [ToDo]
+}
+
 struct ToDo: Codable {
     var item: String
     var priority: Int

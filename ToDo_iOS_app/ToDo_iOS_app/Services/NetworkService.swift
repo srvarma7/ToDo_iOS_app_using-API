@@ -23,7 +23,30 @@ class NetworkService {
         let url = URL(string: BASE_URL)
         
         let task = session.dataTask(with: url!) { (data, response, error) in
-           debugPrint(data)
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                return
+            }
+            
+            guard let data = data, let response = response as? HTTPURLResponse else {
+                debugPrint("Invalid data or response")
+                return
+            }
+            do {
+                if response.statusCode == 200 {
+                    //Parse the data
+                    let items = try JSONDecoder().decode(ToDos.self, from: data)
+                    print(items)
+                } else {
+                    let apiError = try JSONDecoder().decode(APIError.self, from: data)
+                    
+                }
+            } catch {
+                
+            }
+            
+            
+            
         }
         task.resume()
         
