@@ -28,7 +28,7 @@ class ToDoCell: UITableViewCell {
                 break
         default:
             colorView.backgroundColor = .black
-                debugPrint("Invalid priority")
+                debugPrint("Invalid priority found \(priority)")
         }
         
     }

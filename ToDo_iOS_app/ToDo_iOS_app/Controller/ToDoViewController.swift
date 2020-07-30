@@ -25,20 +25,37 @@ class ToDoViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         getTodo()
+        
+        
     }
     
     func getTodo() {
         
         NetworkService.shared.getToDos(onSuccess: { (items) in
-             self.todoItems = items.items
-                       self.tableView.reloadData()
+            self.todoItems = items.items
+            self.tableView.reloadData()
+        }) { (error) in
+            debugPrint(error)
+        }
+    }
+    
+    func addToDo(todo: ToDo) {
+        NetworkService.shared.addToDo(todo: todo, onSuccess: { (items) in
+            self.todoItems = items.items
+            self.tableView.reloadData()
         }) { (error) in
             debugPrint(error)
         }
     }
     
     @IBAction func onAddTapped(_ sender: Any) {
-        print("tapped")
+        guard let text = todoText.text else {
+            print("Error")
+            return
+        }
+        addToDo(todo: ToDo(item: text, priority: priortyControl.selectedSegmentIndex))
+    
+        
     }
 
     /*
