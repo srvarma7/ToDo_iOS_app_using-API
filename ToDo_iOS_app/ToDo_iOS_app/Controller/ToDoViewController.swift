@@ -28,9 +28,12 @@ class ToDoViewController: UIViewController {
     }
     
     func getTodo() {
-        NetworkService.shared.getToDos { (items) in
-            self.todoItems = items.items
-            self.tableView.reloadData()
+        
+        NetworkService.shared.getToDos(onSuccess: { (items) in
+             self.todoItems = items.items
+                       self.tableView.reloadData()
+        }) { (error) in
+            debugPrint(error)
         }
     }
     
